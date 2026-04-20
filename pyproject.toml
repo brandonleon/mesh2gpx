@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mesh2gpx"
+version = "0.1.0"
+description = "Convert Meshtastic position log CSV exports to GPX"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+mesh2gpx = "mesh2gpx.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mesh2gpx"]
